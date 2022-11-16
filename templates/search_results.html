@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container">
+    <h3 class="text-center my-4">Search Result{{queryset|pluralize:"s"}}</h3>
+
+    <div>
+        <ul>
+            {% for result in queryset %}
+            <li>
+                <div>
+                    <a href="{{result.get_absolute_url}}" style="text-decoration-color: blue;">
+                        <h3>{{result.title|truncatewords:10}}</h3>
+                    </a>
+                    <p>{{result.content|truncatewords:15}}</p>
+                </div>
+            </li>
+            {% empty %}
+            <p>No Matching Post</p>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+
+
+
+{% endblock content %}

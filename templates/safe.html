@@ -1,0 +1,29 @@
+{% if not forloop.counter|divisibleby:2  %}
+<a class="mb-3" href="/"><img class="img-fluid" src="{{post.image.url}}" alt="..." /></a>
+{% endif %}
+
+
+{% if forloop.counter|divisibleby:2  %}
+<a class="mb-3" href="post.html"><img class="img-fluid" src="{{post.image.url}}" alt="..." /></a>
+{% endif %}
+
+
+<div class="col-md-4"><a class="mb-3" href="post.html"><img class="img-fluid" src="{% static 'img/blog-2.jpg' %}"
+            alt="..." /></a>
+    <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May |
+            2016</small><a class="small fw-bold text-uppercase small" href="!#">Technology</a></div>
+    <h3 class="h4"><a class="text-dark" href="post.html">Diversity in Engineering: Effect on Questions</a></h3>
+    <p class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore.</p>
+</div>
+<div class="col-md-4"><a class="mb-3" href="post.html"><img class="img-fluid" src="{% static 'img/blog-3.jpg' %}"
+            alt="..." /></a>
+    <div class="d-flex align-items-center justify-content-between mb-2"><small class="text-gray-500">20 May |
+            2016</small><a class="small fw-bold text-uppercase small" href="!#">Financial</a></div>
+    <h3 class="h4"><a class="text-dark" href="post.html">Alberto Savoia Can Teach You About Interior</a></h3>
+    <p class="text-muted text-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+        incididunt ut labore.</p>
+</div>
+</div>
+</div>
+</section>
